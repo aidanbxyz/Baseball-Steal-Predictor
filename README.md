@@ -5,4 +5,7 @@
  [Download the installation file here.](https://github.com/aidanbxyz/Baseball-Steal-Predictor/raw/master/INSTALL.zip "Download 'INSTALL.zip'")
 
 # TO DO
- * test
+ * Make array for each line
+ * Have seperate arrays for STEAL and NO STEAL
+
+# [WIKI](https://github.com/aidanbxyz/Baseball-Steal-Predictor/wiki "Wiki")
