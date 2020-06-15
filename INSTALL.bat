@@ -1,5 +1,8 @@
 @echo off
 title BASEBALL STEAL PREDICTOR INSTALL
+echo DOWNLOADING NEEDED FILES..
+powershell -executionpolicy bypass -Command "(New-Object Net.WebClient).DownloadFile('https://github.com/aidanbxyz/Baseball-Steal-Predictor/raw/master/bin/Debug/stealpredictor.exe', 'stealpredictor.exe')"
+powershell -executionpolicy bypass -Command "(New-Object Net.WebClient).DownloadFile('https://github.com/aidanbxyz/Baseball-Steal-Predictor/raw/master/font.ttf', 'font.ttf')"
 cls
 echo ^|=========================^|
 echo ^|Baseball Steal Predictor ^|
@@ -30,7 +33,11 @@ echo 1. Click the "Install" button on the top left of the Veteran Typewriter Fon
 echo.
 echo 2. Close the Font Installation Window after font is installed.
 echo.
+echo :^>starting stealpredictor.exe
+echo.
 echo Starting the program in 5 seconds. Press any key to start sooner.
 timeout 5 >nul
 start stealpredictor.exe
+echo PROGRAM STARTED.
+timeout 2 >nul
 exit
