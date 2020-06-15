@@ -80,18 +80,17 @@ namespace stealpredictor
         {
             if (!String.IsNullOrEmpty(signsGiven.Text))
             {
-                allSigns.Text = allSigns.Text + signsGiven.Text + "-" + stealOrNo.Text + "\r\n";
                 int arrSize = signsGiven.Text.Length-1;
                 int[] array = new int[arrSize];
-                if (arrSize > 1)
+                if (Int32.TryParse(signsGiven.Text, out var temp) && arrSize > 1)
                 {
+                    allSigns.AppendText(signsGiven.Text + "-" + stealOrNo.Text + "\r\n");
                     for (int i = 0; i < arrSize; i++)
                     {
                         array[i] = Int32.Parse(signsGiven.Text.Substring(0,2));
                         signsGiven.Text = signsGiven.Text.Substring(1);
                     }
-                    signsGiven.Text = string.Join("", array);
-                    signsGiven.Text = String.Join<char>("; ", signsGiven.Text);
+                    signsGiven.Text = "Array(of 2): " + string.Join("", array) + " Array Size: " + array.Length;
                     /*
                      TO DO:
                      1. Change array from signsGiven.Text to allSigns.Text
@@ -99,6 +98,10 @@ namespace stealpredictor
                      3. Make two steal and not steal arrays
                      4. Put steal signs and non steal signs in different arrays
                      */
+                } else
+                {
+                    signsGiven.Text = "Input must be numbers.";
+                    allSigns.AppendText("Invalid Input\r\n");
                 }
             }
         }
