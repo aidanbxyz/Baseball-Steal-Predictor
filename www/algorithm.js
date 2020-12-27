@@ -96,9 +96,6 @@ function runcheckalg() {
                             }
                         }
                     }
-                    //for (var o = 0; o <= possibilities.length; o++) {
-                    //    if (jsonstdata[k] == "true" && !jsondata[k][l][l].includes(possibilities[o])) { possibilities.splice(possibilities.indexOf(jsondata[k][l][l])); }
-                    //}
                 }
             }
         }
