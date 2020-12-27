@@ -1,4 +1,6 @@
 function setbuttonnames() {
+    document.getElementById("regbutton").style.backgroundColor = '#0000ff';
+    document.getElementById("regbutton").innerHTML = 'REGISTERED';
     var q = document.getElementById("1").value;
     var w = document.getElementById("2").value;
     var e = document.getElementById("3").value;
@@ -19,4 +21,5 @@ function setbuttonnames() {
     document.getElementById("08").innerHTML = i;
     document.getElementById("09").innerHTML = o;
     document.getElementById("00").innerHTML = p;
+    setTimeout(() => { document.getElementById("regbutton").style.backgroundColor = ''; document.getElementById("regbutton").innerHTML = 'REGISTER'; }, 2000);
 }
