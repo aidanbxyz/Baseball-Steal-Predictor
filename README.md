@@ -1,5 +1,5 @@
 # Baseball Steal Predictor
- Inspired from https://jabrils.com/sp/ Made in C#
+ Inspired from https://jabrils.com/sp/ Made in C# and HTML/JS/CSS
 
 # DOWNLOAD
  [Download the installation file here.](https://github.com/aidanbxyz/Baseball-Steal-Predictor/raw/master/INSTALL.zip "Download 'INSTALL.zip'")
