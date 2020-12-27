@@ -88,6 +88,17 @@ function runcheckalg() {
                             if (jsonstdata[f] == "false" && jsondata[f][t][t] == jsondata[k][l][l] && possibilities.includes(jsondata[f][t][t])) { possibilities.splice(possibilities.indexOf(jsondata[f][t][t])); }
                         }
                     }
+                    for (var f = 0; f <= totalitems; f++) {
+                        for (var t = 0; t <= jsondata[f].length - 1; t++) {
+                            for (var g = 0; g <= possibilities.length - 1; g++) {
+                                console.log(JSON.stringify(jsondata[f]));
+                                if (jsonstdata[f] == "true" && !JSON.stringify(jsondata[f]).match(possibilities[g])) { possibilities.splice(possibilities.indexOf(jsondata[f][t][t])); }
+                            }
+                        }
+                    }
+                    //for (var o = 0; o <= possibilities.length; o++) {
+                    //    if (jsonstdata[k] == "true" && !jsondata[k][l][l].includes(possibilities[o])) { possibilities.splice(possibilities.indexOf(jsondata[k][l][l])); }
+                    //}
                 }
             }
         }
