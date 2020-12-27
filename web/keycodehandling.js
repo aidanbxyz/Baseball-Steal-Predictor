@@ -42,8 +42,5 @@ document.addEventListener("keydown", (event) => {
     } else if (key == 70) {
         console.log('false');
         setcsssteal(false);
-    } else if (key == 9) {
-        console.log('tab register');
-        setbuttonnames();
     }
 });

@@ -1,39 +1,26 @@
 function runmainalg() {
-    if (document.getElementById("csignset").value != "" && document.getElementById("csswassteal").value != "") {
-        var cssinputbox = document.getElementById("csignset").value;
-        var csswassteal = document.getElementById("csswassteal").value;
+    var cssinputbox = document.getElementById("csignset").value;
+    var csswassteal = document.getElementById("csswassteal").value;
 
-        var allarray = document.getElementById("allarr");
-        var allarr = allarray.innerHTML;
-        allarray.innerHTML = allarr + ' ' + cssinputbox;
+    var allarray = document.getElementById("allarr");
+    var allarr = allarray.innerHTML;
+    allarray.innerHTML = allarr + ' ' + cssinputbox;
 
-        var allstarray = document.getElementById("allstarray");
-        var allst = allstarray.innerHTML;
-        allstarray.innerHTML = allst + ' ' + csswassteal;
+    var allstarray = document.getElementById("allstarray");
+    var allst = allstarray.innerHTML;
+    allstarray.innerHTML = allst + ' ' + csswassteal;
 
-        var table = document.getElementById("datatable");
-        var row = table.insertRow(table.rows.length);
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
-        cell1.align = "center";
-        cell2.align = "center";
-        cell1.innerHTML = cssinputbox;
-        cell2.innerHTML = csswassteal;
-        document.getElementById("csignset").value = '';
-        document.getElementById("csswassteal").value = '';
-        runcheckalg();
-        document.getElementById("csignset").style.border = '0px';
-        document.getElementById("csswassteal").style.border = '0px';
-    } else if (document.getElementById("csignset").value == "" && document.getElementById("csswassteal").value == "") {
-        document.getElementById("csignset").style.border = '5px solid red';
-        document.getElementById("csswassteal").style.border = '5px solid red';
-    } else if (document.getElementById("csignset").value == "") {
-        document.getElementById("csignset").style.border = '5px solid red';
-        document.getElementById("csswassteal").style.border = '0px';
-    } else if (document.getElementById("csswassteal").value == "") {
-        document.getElementById("csignset").style.border = '0px';
-        document.getElementById("csswassteal").style.border = '5px solid red';
-    }
+    var table = document.getElementById("datatable");
+    var row = table.insertRow(table.rows.length);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.align = "center";
+    cell2.align = "center";
+    cell1.innerHTML = cssinputbox;
+    cell2.innerHTML = csswassteal;
+    document.getElementById("csignset").value = '';
+    document.getElementById("csswassteal").value = '';
+    runcheckalg();
 }
 
 function runcheckalg() {
@@ -104,6 +91,7 @@ function runcheckalg() {
                     for (var f = 0; f <= totalitems; f++) {
                         for (var t = 0; t <= jsondata[f].length - 1; t++) {
                             for (var g = 0; g <= possibilities.length - 1; g++) {
+                                console.log(JSON.stringify(jsondata[f]));
                                 if (jsonstdata[f] == "true" && !JSON.stringify(jsondata[f]).match(possibilities[g])) { possibilities.splice(possibilities.indexOf(jsondata[f][t][t])); }
                             }
                         }
@@ -113,10 +101,8 @@ function runcheckalg() {
         }
     }
     if (possibilities.length != 0) {
-        document.getElementById("solution").innerHTML = possibilities.toString().split('').join(' ').replace(/,/g, '::--::');
-        document.getElementById("solutionsigns").innerHTML = possibilities.toString().split('').join(' ').replace(/,/g, '::--::').replace(/1/g, document.getElementById("1").value).replace(/2/g, document.getElementById("2").value).replace(/3/g, document.getElementById("3").value).replace(/4/g, document.getElementById("4").value).replace(/5/g, document.getElementById("5").value).replace(/6/g, document.getElementById("6").value).replace(/7/g, document.getElementById("7").value).replace(/8/g, document.getElementById("8").value).replace(/9/g, document.getElementById("9").value).replace(/0/g, document.getElementById("0").value);
+        document.getElementById("solution").innerHTML = possibilities;
     } else {
         document.getElementById("solution").innerHTML = 'NONE SO FAR';
-        document.getElementById("solutionsigns").innerHTML = 'NONE SO FAR';
     }
 }
