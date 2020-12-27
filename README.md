@@ -1,12 +1,12 @@
 # Baseball Steal Predictor
- Inspired from https://jabrils.com/sp/ Made in C# and HTML/JS/CSS
+ Inspired from https://jabrils.com/sp/ Made in HTML/JS/CSS.
 
-# DOWNLOAD
- [Download the installation file here.](https://github.com/aidanbxyz/Baseball-Steal-Predictor/raw/master/INSTALL.zip "Download 'INSTALL.zip'")
+# ADD TO HOME SCREEN.
+ How to add to home screen:
+ IOS: Go [HERE](https://aidanbxyz.github.io/demos/baseball-steal-predictor/), click the share icon, click add to home screen.
+ ANDROID: Go [HERE](https://aidanbxyz.github.io/demos/baseball-steal-predictor/), click the 3 vertical dots at the top of chrome, click add to home screen.
 
 # TO DO
- * Make array for each line
- * Have seperate arrays for STEAL and NO STEAL
- * Finish up
+ * Make suggestions, I can't think of anything
 
 # [WIKI](https://github.com/aidanbxyz/Baseball-Steal-Predictor/wiki "Wiki")
