@@ -1,0 +1,9 @@
+C:\Users\biggs\Documents\GitHub\Baseball-Steal-Predictor\windows\BaseballStealPredictor\bin\Debug\BaseballStealPredictor.exe
+C:\Users\biggs\Documents\GitHub\Baseball-Steal-Predictor\windows\BaseballStealPredictor\bin\Debug\BaseballStealPredictor.pdb
+C:\Users\biggs\Documents\GitHub\Baseball-Steal-Predictor\windows\BaseballStealPredictor\obj\Debug\BaseballStealPredictor.csprojAssemblyReference.cache
+C:\Users\biggs\Documents\GitHub\Baseball-Steal-Predictor\windows\BaseballStealPredictor\obj\Debug\BaseballStealPredictor.Properties.Resources.resources
+C:\Users\biggs\Documents\GitHub\Baseball-Steal-Predictor\windows\BaseballStealPredictor\obj\Debug\BaseballStealPredictor.csproj.GenerateResource.cache
+C:\Users\biggs\Documents\GitHub\Baseball-Steal-Predictor\windows\BaseballStealPredictor\obj\Debug\BaseballStealPredictor.csproj.CoreCompileInputs.cache
+C:\Users\biggs\Documents\GitHub\Baseball-Steal-Predictor\windows\BaseballStealPredictor\obj\Debug\BaseballStealPredictor.exe
+C:\Users\biggs\Documents\GitHub\Baseball-Steal-Predictor\windows\BaseballStealPredictor\obj\Debug\BaseballStealPredictor.pdb
+C:\Users\biggs\Documents\GitHub\Baseball-Steal-Predictor\windows\BaseballStealPredictor\obj\Debug\BaseballStealPredictor.mainForm.resources
