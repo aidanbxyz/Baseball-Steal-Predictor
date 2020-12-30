@@ -87,7 +87,6 @@ function runcheckalg() {
     var possibilities = [];
     for (var i = 0; i <= totalitems; i++) {
         for (var j = 0; j <= jsondata[i].length - 1; j++) {
-            console.log(jsondata[i][j][j]);
             for (var k = 0; k <= totalitems; k++) {
                 for (var l = 0; l <= jsondata[k].length - 1; l++) {
                     if ((jsondata[k][l][l] == jsondata[i][j][j]) && (jsonstdata[k] == "true") && (jsonstdata[i] == "true") && (k != i)) {

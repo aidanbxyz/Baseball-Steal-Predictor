@@ -16,14 +16,3 @@ function setcsssteal(cssstealstat) {
         csswassteal.value = 'false';
     }
 }
-
-function removeAll() {
-    while (document.getElementById("datatable").rows.length > 2) {
-        document.getElementById("datatable").deleteRow(document.getElementById("datatable").rows.length - 1);
-    }
-    document.getElementById("allarr").innerHTML = '';
-    document.getElementById("allstarray").innerHTML = '';
-    document.getElementById("solution").innerHTML = 'ENTER DATA';
-    document.getElementById("solutionsigns").innerHTML = 'ENTER DATA';
-
-}

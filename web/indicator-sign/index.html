@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Baseball Steal Predictor</title>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="keycodehandling.js"></script>
+    <script src="csignsetinputbox.js"></script>
+    <script src="algorithm.js"></script>
+    <script src="setbuttonnames.js"></script>
+    <script src="debugua.js"></script>
+</head>
+
+<body>
+    <p><a href="https://aidanb.xyz">https://aidanb.xyz</a></p>
+    <h1>Baseball Steal Predictor</h1>
+    <h2>INDICATOR THEN SIGN</h2>
+    <hr>
+    <h3>
+        <ol>
+            <li>set each number to a sign (example: 1=hat, 2=elbow, etc). Use as many as needed.</li>
+            <li>use 0-9 to add signs to the current sign set</li>
+            <li>Use true or false (t or f on keyboard) to set whether it was a steal (true) or not (false).</li>
+            <li>press enter to add the sign to the table</li>
+        </ol>
+    </h3>
+    <hr>
+    <a href="../?noredir"><button>USE A DIFFERENT ALGORITHM</button></a>
+    <hr>
+    <div class="maindiv">
+        <h2>Current Sign Set</h2>
+        <input id="csignset" type="text" placeholder="sequence" readonly>
+        <br><br>
+        <button onclick="addtocssinputbox(1)">1<br><span id="01"></span></button> <button onclick="addtocssinputbox(2)">2<br><span id="02"></span></button> <button onclick="addtocssinputbox(3)">3<br><span id="03"></span></button><br><br>
+        <button onclick="addtocssinputbox(4)">4<br><span id="04"></span></button> <button onclick="addtocssinputbox(5)">5<br><span id="05"></span></button> <button onclick="addtocssinputbox(6)">6<br><span id="06"></span></button><br><br>
+        <button onclick="addtocssinputbox(7)">7<br><span id="07"></span></button> <button onclick="addtocssinputbox(8)">8<br><span id="08"></span></button> <button onclick="addtocssinputbox(9)">9<br><span id="09"></span></button><br><br>
+        <button onclick="addtocssinputbox(0)">0<br><span id="00"></span></button> <button onclick="removefromcssinputbox()">&#8592;<br>back</button> <button onclick="runmainalg()">&#8627;<br>submit</button>
+        <br><br><br>
+        <input id="csswassteal" type="text" placeholder="steal?" readonly>
+        <br><br>
+        <button onclick="setcsssteal(true)">true</button> <button onclick="setcsssteal(false)">false</button>
+        <br><br>
+        <button onclick="runmainalg()">SUBMIT</button>
+    </div>
+    <hr>
+    <div class="solutionsdiv">
+        <h2>Possible Steal Sign(s)</h2>
+        <br>
+        <p id="solution">ENTER DATA</p>
+        <p id="solutionsigns">ENTER DATA</p>
+    </div>
+    <hr>
+    <div class="secdiv">
+        <h2>Data Table</h2>
+        <p>
+            <table id="datatable" style="width: 100%;">
+                <tr>
+                    <th style="top: 0;">
+                        <h3>sequence</h3>
+                    </th>
+                    <th style="top: 0;">
+                        <h3>steal</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <td align="center"></td>
+                    <td align="center"></td>
+                </tr>
+            </table>
+        </p>
+    </div>
+    <hr>
+    <div class="tridiv">
+        <h2>Asign Actions to Numbers</h2>
+        <p>
+            1. <input id="1" type="text"><br><br> 2. <input id="2" type="text"><br><br> 3. <input id="3" type="text"><br><br> 4. <input id="4" type="text"><br><br> 5. <input id="5" type="text"><br><br> 6. <input id="6" type="text"><br><br> 7. <input id="7"
+                type="text"><br><br> 8. <input id="8" type="text"><br><br> 9. <input id="9" type="text"><br><br> 0. <input id="0" type="text">
+        </p>
+        <button id="regbutton" onclick="setbuttonnames()">REGISTER</button>
+    </div>
+    <p>**NOTE: This algorithm only works on signs that use an indicator then the steal/bunt/whatever sign.**</p>
+    <br>
+    <p>Idea from <a href="https://jabrils.com/sp/">https://jabrils.com/sp/</a>. No code or style references used.</p>
+    <p>I made my own version just to see if I can.</p>
+    <br>
+    <p id="debugua">For dubug perposes: No info found</p>
+    <p id="allarr" style="display: none;"></p>
+    <p id="allstarray" style="display: none;"></p>
+</body>
+
+</html>
